@@ -102,7 +102,7 @@ loadDataIMDB = function()
   glue = list();
     # this was original seed to determine `headliners` above
     # from this seed, those additional pages were collected in
-    # all.actors and all.movies
+    # all.actors and all.movies ...
     glue$movies.creatives = readRDS(
     system.file("extdata", "glue.movies.headliners.rds", package="humanVerseWSU") );
 
