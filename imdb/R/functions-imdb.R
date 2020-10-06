@@ -141,7 +141,7 @@ loadDataIMDB = function()
 #' @param return.cols list of columns you want to display, by default all
 #' @param imdb If you want to apply this function to a different dataframe, it's possible
 #'
-#' @return dataframe of results
+#' @return dataframe of results ...
 #' @export
 IMDB.getMovieInfoFromActorSearch = function(ttid, return.cols=NULL, imdb=imdb.data$all.actors.movies)
   {
