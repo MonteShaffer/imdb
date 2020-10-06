@@ -1,0 +1,26 @@
+{
+    "id": "1407F083",
+    "path": "C:/_git_/MonteShaffer/imdb/imdb/R/functions-imdb.R",
+    "project_path": "R/functions-imdb.R",
+    "type": "r_source",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1601973459833.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "138,2",
+        "scrollLine": "130"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1601973842,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1601973842902,
+    "read_only": false,
+    "read_only_alternatives": []
+}
