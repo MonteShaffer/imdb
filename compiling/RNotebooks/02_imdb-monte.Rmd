@@ -26,6 +26,15 @@ library(humanVerseWSU);
 # # Choose (3) None to minimize headaches ....
 # library(humanVerseWSU);
 
+
+library(imdb);
+
+# library(devtools);
+# detach(package:imdb);
+# install_github("MonteShaffer/imdb/imdb");
+# # Choose (3) None to minimize headaches ....
+# library(imdb);
+
 ```
 
 The dataset is large and `?loadDataIMDB` contains some of the information.  See also <http://md5.mshaffer.com/WSU_STATS419/01_imdb-monte.html>

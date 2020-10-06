@@ -12,9 +12,9 @@ knitr::opts_chunk$set(warning = FALSE);
 knitr::opts_chunk$set(message = FALSE);
 
 data.path = "R:/WSU_STATS419_FALL2020/modules/imdb/2020-09/dataframes/";
-imdb.path = "C:/_git_/MonteShaffer/humanVerseWSU/humanVerseWSU/inst/extdata/";
+imdb.path = "C:/_git_/MonteShaffer/imdb/imdb/inst/extdata/";
 
-backup.path = "C:/_git_/MonteShaffer/humanVerseWSU/compiling/raw-data/";
+backup.path = "C:/_git_/MonteShaffer/imdb/compiling/raw-data/";
 
 ```
 

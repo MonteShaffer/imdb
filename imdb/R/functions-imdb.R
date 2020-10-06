@@ -60,31 +60,31 @@ loadDataIMDB = function()
   imdb = list();
     actors = list();
   actors$all = readRDS(
-    system.file("extdata", "all.actors.rds", package="humanVerseWSU") );
+    system.file("extdata", "all.actors.rds", package="imdb") );
   actors$popular50 = readRDS(
-    system.file("extdata", "actors.byyear.popular50.rds", package="humanVerseWSU") );
+    system.file("extdata", "actors.byyear.popular50.rds", package="imdb") );
   actors$gem50 = readRDS(
-    system.file("extdata", "actors.byyear.gem50.rds", package="humanVerseWSU") );
+    system.file("extdata", "actors.byyear.gem50.rds", package="imdb") );
   actors$headliners = readRDS(
-    system.file("extdata", "actors.headliners.rds", package="humanVerseWSU") );
+    system.file("extdata", "actors.headliners.rds", package="imdb") );
   actors$top250 = readRDS(
-    system.file("extdata", "actors.top250.rds", package="humanVerseWSU") );
+    system.file("extdata", "actors.top250.rds", package="imdb") );
   actors$nm5000 = readRDS(
-    system.file("extdata", "actors.nm5000.rds", package="humanVerseWSU") );
+    system.file("extdata", "actors.nm5000.rds", package="imdb") );
   actors$tt5000 = readRDS(
-    system.file("extdata", "actors.tt5000.rds", package="humanVerseWSU") );
+    system.file("extdata", "actors.tt5000.rds", package="imdb") );
 
     movies = list();
   movies$all = readRDS(
-    system.file("extdata", "all.movies.rds", package="humanVerseWSU") );
+    system.file("extdata", "all.movies.rds", package="imdb") );
   movies$popular50 = readRDS(
-    system.file("extdata", "movies.byyear.popular50.rds", package="humanVerseWSU") );
+    system.file("extdata", "movies.byyear.popular50.rds", package="imdb") );
   movies$gem50 = readRDS(
-    system.file("extdata", "movies.byyear.gem50.rds", package="humanVerseWSU") );
+    system.file("extdata", "movies.byyear.gem50.rds", package="imdb") );
   movies$top250 = readRDS(
-    system.file("extdata", "movies.top250.rds", package="humanVerseWSU") );
+    system.file("extdata", "movies.top250.rds", package="imdb") );
   movies$tt5000 = readRDS(
-    system.file("extdata", "movies.tt5000.rds", package="humanVerseWSU") );
+    system.file("extdata", "movies.tt5000.rds", package="imdb") );
 
 
   headliners = list();
@@ -92,11 +92,11 @@ loadDataIMDB = function()
   # to be in this list, the said person/institution must have been
   # a headliner on at least 15 movies.
     headliners$companies = readRDS(
-      system.file("extdata", "headliners.companies.rds", package="humanVerseWSU") );
+      system.file("extdata", "headliners.companies.rds", package="imdb") );
     headliners$directors = readRDS(
-      system.file("extdata", "headliners.directors.rds", package="humanVerseWSU") );
+      system.file("extdata", "headliners.directors.rds", package="imdb") );
     headliners$writers = readRDS(
-      system.file("extdata", "headliners.writers.rds", package="humanVerseWSU") );
+      system.file("extdata", "headliners.writers.rds", package="imdb") );
     headliners$actors = actors$headliners;
 
   glue = list();
@@ -104,26 +104,26 @@ loadDataIMDB = function()
     # from this seed, those additional pages were collected in
     # all.actors and all.movies ...
     glue$movies.creatives = readRDS(
-    system.file("extdata", "glue.movies.headliners.rds", package="humanVerseWSU") );
+    system.file("extdata", "glue.movies.headliners.rds", package="imdb") );
 
     imdb$all.movies.creatives = readRDS(
-    system.file("extdata", "all.movies.creatives.rds", package="humanVerseWSU") );
+    system.file("extdata", "all.movies.creatives.rds", package="imdb") );
     imdb$all.movies.companies = readRDS(
-    system.file("extdata", "all.movies.companies.rds", package="humanVerseWSU") );
+    system.file("extdata", "all.movies.companies.rds", package="imdb") );
     # imdb$all.movies.extra = readRDS(
-    # system.file("extdata", "all.movies.extra.rds", package="humanVerseWSU") );
+    # system.file("extdata", "all.movies.extra.rds", package="imdb") );
     imdb$all.movies.actors.characters = readRDS(
-    system.file("extdata", "all.movies.actors.characters.rds", package="humanVerseWSU") );
+    system.file("extdata", "all.movies.actors.characters.rds", package="imdb") );
 
     imdb$all.actors.rank = readRDS(
-    system.file("extdata", "all.actors.rank.rds", package="humanVerseWSU") );
+    system.file("extdata", "all.actors.rank.rds", package="imdb") );
     imdb$all.actors.movies = readRDS(
-    system.file("extdata", "all.actors.movies.rds", package="humanVerseWSU") );
+    system.file("extdata", "all.actors.movies.rds", package="imdb") );
     imdb$all.actors.info = readRDS(
-    system.file("extdata", "all.actors.info.rds", package="humanVerseWSU") );
+    system.file("extdata", "all.actors.info.rds", package="imdb") );
 
     imdb$moviecount.byyear = readRDS(
-    system.file("extdata", "moviecount.byyear.rds", package="humanVerseWSU") );
+    system.file("extdata", "moviecount.byyear.rds", package="imdb") );
 
     imdb$actors = actors;
     imdb$glue = glue;
