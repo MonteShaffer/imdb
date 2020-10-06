@@ -8,7 +8,7 @@ loadDataIMDB()
 }
 \description{
 This reads in 23 compressed files that are about 56MB.
-It will use a bit of RAM to load these data.
+It will use a bit of RAM to load these data. ...
 }
 \details{
 Short notation for `imdb.data$actors$all`.
