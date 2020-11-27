@@ -1,7 +1,7 @@
 Package: imdb
 Type: Package
 Title: IMDB data set with basic search functions (September 2020), about 50MB zipped
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: person( "Monte J. Shaffer", email = "monte.shaffer@gmail.com",
   role = c("aut", "cre")  )
 Description: IMDB data objects, ...

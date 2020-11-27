@@ -18,7 +18,7 @@ IMDB.getMovieInfoFromActorSearch(
 \item{imdb}{If you want to apply this function to a different dataframe, it's possible}
 }
 \value{
-dataframe of results
+dataframe of results ... ...
 }
 \description{
 IMDB.getMovieInfoFromActorSearch
