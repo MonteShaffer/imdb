@@ -86,6 +86,13 @@ loadDataIMDB = function()
   movies$tt5000 = readRDS(
     system.file("extdata", "movies.tt5000.rds", package="imdb") );
 
+  movies.df = list();
+  movies.df$cast = readRDS(
+    system.file("extdata", "movies-cast.rds", package="imdb") );
+  movies.df$text = readRDS(
+    system.file("extdata", "movies-text.rds", package="imdb") );
+  movies.df$info = readRDS(
+    system.file("extdata", "movies-info.rds", package="imdb") );
 
   headliners = list();
   # headliner is a top actor, director, writer, or company
@@ -223,6 +230,42 @@ IMDB.getMoviesForPerson = function(nmid, return.cols=NULL, imdb=imdb.data)
 
   if(is.null(return.cols)) { info.more; } else { info.more[, return.cols]; }
   }
+
+
+#' IMDB.getActorsFromMovie
+#'
+#' @param ttid  Movie identifier `ttid`
+#' @param return.cols list of columns you want to display, by default all
+#' @param imdb If you want to apply this function to a different dataframe, it's possible
+#'
+#' dim(imdb.data$all.movies.actors.characters);     # 901324      4
+#'
+#' @return dataframe of results
+#' @export
+IMDB.getActorsFromMovie = function(ttid, return.cols=NULL, imdb=imdb.data)
+  {
+  # $all.actors.movies
+  # $$all.actors.rank
+  # inner join with rank / character names ??
+  # movies info, just a few cols ...
+  info = imdb.data$all.movies.actors.characters[imdb.data$all.movies.actors.characters$ttid == ttid, ];
+  # latest function
+  # info = humanVerseWSU::subsetDataFrame(imdb.data$all.movies.actors.characters, "ttid", "==", ttid);
+
+  # character name here as well?  From a different dataset ...
+  # https://www.datasciencemadesimple.com/join-in-r-merge-in-r/
+  # info.more = merge(info, imdb$all.actors.movies, by="ttid");
+
+  #characters = imdb$all.movies.actors.characters[
+   #                 imdb$all.movies.actors.characters$nmid == nmid,];
+
+  #info.even.more = merge(info.more, imdb$all.movies.actors.characters, by="nmid");
+  info.more = info;
+  info.more = humanVerseWSU::sortDataFrameByNumericColumns(info.more,"actor.rank", "ASC");
+
+  if(is.null(return.cols)) { info.more; } else { info.more[, return.cols]; }
+  }
+
 
 #' IMDB.searchPersonName
 #'
