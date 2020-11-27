@@ -136,6 +136,7 @@ loadDataIMDB = function()
     imdb$glue = glue;
     imdb$headliners = headliners;
     imdb$movies = movies;
+    imdb$movies.df = movies.df;
 
   .GlobalEnv$imdb.data = imdb;
   }
